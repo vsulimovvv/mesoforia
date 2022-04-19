@@ -48,7 +48,7 @@
     line-height: 1;
 
     @include breakpointsMaxW($bp-576) {
-      font-size: 12px;
+      font-size: 11px;
     }
     a {
       color: var(--color-accent);
