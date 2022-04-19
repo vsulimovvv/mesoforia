@@ -1,0 +1,49 @@
+.swiper-scrollbar {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  width: calc(100% - 120px) !important;
+
+  &-drag {
+    background-color: var(--color-accent);
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #eef4ff;
+  transition: 150ms ease;
+
+  &::after {
+    @include elDef();
+    width: 10px;
+    height: 10px;
+    @include maskImage(url('../images/icons/chevron.svg'), contain);
+    background-color: var(--color-accent);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+
+  &:hover {
+    background-color: var(--color-accent);
+
+    &::after {
+      background-color: var(--color-white);
+    }
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+.swiper-button-next {
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}

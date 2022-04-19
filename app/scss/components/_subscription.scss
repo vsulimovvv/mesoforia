@@ -1,0 +1,56 @@
+.subscription {
+  background-color: #f4f6f8;
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+  &__undertitle {
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #282b31;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 300;
+    a {
+      font-weight: 400;
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+  }
+
+  &__slider {
+    max-width: 1540px;
+    width: 100%;
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &__slide {
+    max-width: 250px;
+    @include adaptive-value('max-width', 250, 125, 1);
+    @include adaptive-value('height', 230, 115, 1);
+    box-sizing: border-box;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

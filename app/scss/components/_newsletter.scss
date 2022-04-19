@@ -1,0 +1,35 @@
+.newsletter {
+  color: var(--color-white);
+  @include background(cover);
+
+  &__title {
+    text-transform: uppercase;
+    @include adaptive-value('font-size', 40, 24, 1);
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 1.1;
+  }
+
+  &__wrapper {
+    min-height: 310px;
+    display: grid;
+    grid-template-columns: minmax(auto, 550px) minmax(auto, 400px);
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr 390px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+}

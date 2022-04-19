@@ -1,0 +1,69 @@
+.mesoblog {
+  background-color: #f4f6f8;
+  @include adaptive-value('padding-top', 90, 40, 1);
+  @include adaptive-value('padding-bottom', 90, 40, 1);
+  background-color: #2b4064;
+  color: var(--color-white);
+  z-index: 3;
+
+  @include background(cover);
+
+  &__title {
+    margin-bottom: 20px;
+    color: var(--color-white);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 40px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpointsMaxW($bp-991) {
+      align-items: center;
+    }
+  }
+
+  &__text {
+    color: #a2aab9;
+    @include breakpointsMaxW($bp-991) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__slider {
+    width: 100%;
+    min-width: 0;
+  }
+
+  &__list {
+    min-width: 0;
+  }
+
+  &__item {
+    @include adaptive-value('max-width', 400, 240, 1);
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  .article-card {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+}

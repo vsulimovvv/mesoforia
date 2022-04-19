@@ -1,0 +1,31 @@
+.text-section {
+  @include adaptive-value('padding-top', 50, 30, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 35, 25, 1);
+  }
+
+  &__preview {
+    height: 250px;
+    border-radius: 10px;
+    @include background(cover);
+
+    @include adaptive-value('height', 250, 150, 1);
+  }
+
+  &__text {
+    span {
+      font-weight: 600;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

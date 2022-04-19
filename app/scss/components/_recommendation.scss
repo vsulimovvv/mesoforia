@@ -1,0 +1,76 @@
+.recommendations {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  .news-tabs {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      @include breakpointsMaxW($bp-991) {
+        flex-direction: column;
+      }
+    }
+
+    &__top-list {
+      gap: 30px;
+    }
+
+    &__top-btn {
+      padding: 0;
+      background-color: transparent;
+      color: #c3c7d1;
+      position: relative;
+
+      &::after {
+        @include elDef();
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-accent);
+        bottom: -3px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 250ms ease;
+      }
+
+      &:hover {
+        color: #2d313b;
+      }
+
+      &--active {
+        font-size: 40px;
+        line-height: 1;
+        font-weight: 600;
+        color: #2d313b;
+        @include adaptive-value('font-size', 40, 22, 1);
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @include breakpointsMaxW($bp-991) {
+        grid-template-columns: repeat(3, minmax(auto, 290px));
+        justify-content: center;
+      }
+      @include breakpointsMaxW($bp-768) {
+        grid-template-columns: repeat(2, minmax(auto, 290px));
+      }
+      @include breakpointsMaxW($bp-576) {
+        grid-template-columns: minmax(auto, 290px);
+      }
+    }
+    &__item{
+      height: 100%;
+    }
+  }
+}

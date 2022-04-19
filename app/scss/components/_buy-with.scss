@@ -1,0 +1,43 @@
+.buy-with {
+  @include adaptive-value('padding-top', 50, 20, 1);
+  @include adaptive-value('padding-bottom', 50, 20, 1);
+  
+  &__top {
+    border-bottom: 1px solid #eceff4;
+    @include adaptive-value('margin-bottom', 44, 30, 1);
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 20px;
+    display: inline-block;
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-accent);
+      bottom: -1px;
+      left: 0;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, minmax(auto, 290px));
+      justify-content: center;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, minmax(auto, 290px));
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 290px);
+    }
+  }
+  &__item {
+    height: 100%;
+  }
+}

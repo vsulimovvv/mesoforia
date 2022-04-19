@@ -1,0 +1,41 @@
+.last-news {
+  &__title {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+  }
+
+  &__slide {
+    max-width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  &__slider {
+    min-width: 0;
+    max-width: 310px;
+    padding-bottom: 30px;
+  }
+
+  .swiper-pagination {
+    text-align: left;
+
+    &-bullet {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  .news-card {
+    border: none;
+    &__info {
+      padding: 0;
+      padding-top: 20px;
+    }
+    &__text {
+      font-size: 15px;
+    }
+  }
+}

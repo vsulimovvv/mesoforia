@@ -1,0 +1,53 @@
+.breadcrumbs {
+  @include adaptive-value('padding-top', 25, 20, 1);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 7px;
+      padding-right: 14px;
+      transition: 150ms;
+
+      &::after {
+        @include elDef();
+        width: 8px;
+        height: 7px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        right: 0;
+        @include maskImage(url('../images/icons/chevron.svg'), contain);
+        background-color: #c2c2c2;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    transition: 150ms;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #a8adb0;
+
+    &--main {
+      width: 14px;
+      height: 14px;
+      @include maskImage(url('../images/icons/home.svg'), contain);
+      background-color: #a8adb0;
+    }
+
+    &--active {
+      color: var(--color-accent);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}

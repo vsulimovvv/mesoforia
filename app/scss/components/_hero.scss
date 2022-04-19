@@ -1,0 +1,107 @@
+.hero {
+  @include background(cover);
+  color: var(--color-white);
+
+  &__slide {
+    box-sizing: border-box;
+  }
+
+  &__slider {
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+    }
+    .swiper-button-next {
+      right: 5%;
+    }
+    .swiper-button-prev {
+      left: 5%;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+
+    @include breakpointsMaxW($bp-991) {
+      align-items: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    height: 600px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(400px + (600 - 400) * ((100vw - 991px) / (1270 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      height: 700px;
+      height: calc(550px + (700 - 550) * ((100vw - 375px) / (991 - 375)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      padding-top: 50px;
+      align-items: flex-start;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    line-height: 1.1;
+    font-weight: 700;
+    @include adaptive-value('font-size', 63, 54, 1);
+    color: var(--color-white);
+
+    span {
+      font-weight: 800;
+      text-transform: uppercase;
+
+      @include adaptive-value('font-size', 24, 20, 1);
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 300;
+    text-transform: none;
+    margin-bottom: 40px;
+  }
+
+  &__preview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 690px;
+    height: 100%;
+    @include background(contain);
+    background-image: url('../images/content/hero/slide-1.png');
+    z-index: -1;
+
+    @include breakpointsMaxW($bp-991) {
+      background-image: url('../images/content/hero/slide-1-small.png');
+      height: 500px;
+      right: initial;
+      left: 50%;
+      top: initial;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: calc(350px + (690 - 350) * ((100vw - 375px) / (991 - 375)));
+      height: calc(350px + (500 - 350) * ((100vw - 375px) / (991 - 375)));
+    }
+  }
+}

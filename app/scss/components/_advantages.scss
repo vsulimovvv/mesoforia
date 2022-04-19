@@ -1,0 +1,68 @@
+.advantages {
+  @include adaptive-value('padding-top', 65, 40, 1);
+  @include adaptive-value('padding-bottom', 65, 40, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 225px));
+    justify-content: space-between;
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 225px));
+      justify-content: center;
+      gap: 50px 30px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: minmax(auto, 225px);
+    }
+  }
+
+  &__item {
+    text-align: center;
+    padding-top: 77px;
+    position: relative;
+    @include breakpointsMaxW($bp-768) {
+      padding-top: 50px;
+    }
+
+    &::after {
+      @include elDef();
+      width: 30px;
+      height: 30px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--color-accent);
+    }
+
+    &--available {
+      &::after {
+        @include maskImage(url('../images/icons/available.svg'), contain);
+      }
+    }
+    &--sms {
+      &::after {
+        @include maskImage(url('../images/icons/sms.svg'), contain);
+      }
+    }
+    &--box {
+      &::after {
+        @include maskImage(url('../images/icons/box.svg'), contain);
+      }
+    }
+    &--price {
+      &::after {
+        @include maskImage(url('../images/icons/wallet.svg'), contain);
+      }
+    }
+  }
+
+  &__heading {
+    @include adaptive-value('margin-bottom', 15, 10, 1);
+    @include adaptive-value('font-size', 16, 14, 1);
+  }
+
+  &__text {
+  }
+}
