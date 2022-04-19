@@ -350,7 +350,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
     bindModal('.phone-box__call', '.popup', '.popup__close');
-    bindModal('.sing-in', '.popup', '.popup__close');
   })();
 
   // * ===== Toggle Tabs

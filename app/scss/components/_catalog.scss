@@ -118,6 +118,9 @@
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
+    @include breakpointsMaxW($bp-576) {
+      height: 190px;
+    }
 
     img {
       @include img(contain);
@@ -178,12 +181,21 @@
     line-height: 1.1;
     font-weight: 600;
     color: #4f5d76;
+
+    @include breakpointsMaxW($bp-576) {
+      font-size: 15px;
+      font-weight: 600;
+      color: #4f5d76;
+    }
   }
 
   &__btns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__btn {
@@ -194,6 +206,9 @@
     @include breakpointsMaxW($bp-container) {
       font-size: 14px;
       padding: 12px 8px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      width: 100%;
     }
 
     &--buy {
@@ -212,6 +227,9 @@
         padding-left: 30px;
         width: 110px;
       }
+      @include breakpointsMaxW($bp-576) {
+        width: 100%;
+      }
 
       &::after {
         @include elDef();
@@ -224,6 +242,9 @@
         @include maskImage(url('../images/icons/basket.svg'), contain);
         @include breakpointsMaxW($bp-container) {
           left: 8px;
+        }
+        @include breakpointsMaxW($bp-576) {
+          left: 40px;
         }
       }
 
@@ -259,11 +280,28 @@
     gap: 20px;
     max-width: 100%;
 
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .product-card {
       &__img {
         max-width: 250px;
         width: 100%;
         height: 250px;
+        @include breakpointsMaxW($bp-991) {
+          max-width: 100%;
+          img {
+            width: 80%;
+          }
+        }
+        @include breakpointsMaxW($bp-576) {
+          height: 190px;
+          img {
+            width: 100%;
+          }
+        }
       }
 
       &__price {
@@ -279,6 +317,20 @@
         &__img {
           max-width: 100%;
         }
+      }
+    }
+  }
+
+  .counter {
+    @include breakpointsMaxW($bp-576) {
+      width: 90px;
+      height: 30px;
+
+      &__input {
+        height: 100%;
+        width: 40px;
+        font-size: 15px;
+        line-height: 1;
       }
     }
   }
@@ -298,6 +350,10 @@
     display: grid;
     grid-template-columns: repeat(4, 58px);
     gap: 5px;
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: repeat(4, 35px);
+    }
   }
 
   &__btn {
@@ -313,6 +369,10 @@
     width: 100%;
     cursor: pointer;
     transition: 150ms ease-in;
+
+    @include breakpointsMaxW($bp-576) {
+      font-size: 9px;
+    }
 
     &--active,
     &:hover {

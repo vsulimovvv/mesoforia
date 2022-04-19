@@ -3,6 +3,7 @@
 Главная: https://vsulimovvv.github.io/mesoforia/app/index.html  
 Категории товаров: https://vsulimovvv.github.io/mesoforia/app/catalog.html  
 Карточка товара: https://vsulimovvv.github.io/mesoforia/app/product.html  
+Карточка товара (незарегистрированных): https://vsulimovvv.github.io/mesoforia/app/product-2.html  
 Порядок оплаты: https://vsulimovvv.github.io/mesoforia/app/payment.html  
 Доставка: https://vsulimovvv.github.io/mesoforia/app/delivery.html  
 Статьи: https://vsulimovvv.github.io/mesoforia/app/articles.html  

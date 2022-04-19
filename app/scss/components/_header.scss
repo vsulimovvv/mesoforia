@@ -274,8 +274,6 @@
   }
 }
 
-
-
 .phone-box {
   flex-shrink: 0;
   display: flex;
@@ -312,7 +310,7 @@
     color: var(--color-accent);
     line-height: 1;
     font-size: 15px;
-    
+
     @include breakpointsMaxW($bp-768) {
       font-size: 13px;
     }
@@ -545,6 +543,12 @@
     }
 
     &--cart {
+      .count {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
+
+      background-color: var(--color-accent-light);
       &::after {
         @include maskImage(url('../images/icons/cart.svg'), contain);
       }

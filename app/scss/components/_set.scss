@@ -11,6 +11,13 @@
   }
   &__inner {
     padding: 25px;
+
+    @include breakpointsMaxW($bp-991) {
+      padding: 20px;
+    }
+    @include breakpointsMaxW($bp-576) {
+      padding: 10px;
+    }
   }
 
   &__list {
@@ -19,12 +26,7 @@
     gap: 10px;
     justify-content: space-between;
 
-    @include breakpointsMaxW($bp-991) {
-      grid-template-columns: minmax(auto, 540px);
-      justify-content: center;
-    }
-
-    @include breakpointsMaxW($bp-576) {
+    @include breakpointsMaxW($bp-360) {
       grid-template-columns: minmax(auto, 300px);
     }
   }

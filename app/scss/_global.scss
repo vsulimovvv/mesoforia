@@ -525,7 +525,6 @@ body {
 
   &__left {
     max-width: 250px;
- 
   }
   &__box {
     .choices {
@@ -596,9 +595,16 @@ body {
 
 .spec-product {
   @include adaptive-value('padding-top', 60, 40, 1);
+  @include adaptive-value('padding-bottom', 60, 40, 1);
   .spec-tabs {
     &__top {
       margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eceff4;
+      @include breakpointsMaxW($bp-991) {
+        border-bottom: none;
+      }
+
       &-list {
         @include adaptive-value('gap', 30, 10, 1);
         display: flex;
@@ -619,11 +625,15 @@ body {
           width: 100%;
           height: 2px;
           background-color: var(--color-accent);
-          bottom: -3px;
+          bottom: -22px;
           left: 0;
           transform: scaleX(0);
           transform-origin: left;
           transition: 250ms ease;
+
+          @include breakpointsMaxW($bp-991) {
+            bottom: -3px;
+          }
         }
 
         &--active {
@@ -656,6 +666,117 @@ body {
       &.active {
         display: block;
         animation: opacity-visibility 700ms ease forwards;
+      }
+    }
+
+    &__videos {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .overview-card {
+      position: relative;
+
+      &__play {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:hover {
+          transform: translateX(-50%) scale(1.1);
+        }
+      }
+    }
+
+    &__reviews {
+      margin-bottom: 50px;
+    }
+    &__grade {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &__rating {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+        color: #3b3e3f;
+      }
+    }
+
+    &__heading {
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 500;
+      color: #3b3e3f;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__textarea {
+      width: 100%;
+      display: block;
+      font-size: 17px;
+      line-height: 1.1;
+      padding: 25px;
+      background-color: var(--color-white);
+      border: 1px solid #d5d5d5;
+      border-radius: 10px;
+      min-height: 130px;
+      color: var(--color-dark);
+      margin-bottom: 20px;
+
+      &::placeholder {
+        color: #9ba5aa;
+      }
+    }
+  }
+
+  .download {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(auto, 250px));
+      gap: 30px 50px;
+
+      @include breakpointsMaxW($bp-768) {
+        gap: 20px;
+      }
+      @include breakpointsMaxW($bp-576) {
+        font-size: 13px;
+        grid-template-columns: repeat(2, minmax(auto, 230px));
+      }
+      @include breakpointsMaxW($bp-360) {
+        grid-template-columns: minmax(auto, 250px);
+      }
+    }
+
+    &__link {
+      display: block;
+      padding-left: 30px;
+      position: relative;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+
+      &::after {
+        @include elDef();
+        width: 20px;
+        height: 20px;
+        @include backgroundImage(
+          url('../images/content/pdf-icon.png'),
+          contain
+        );
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
       }
     }
   }
@@ -830,4 +951,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+// Rating
+
+.rating-area {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 25px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 25px;
+  color: #e1e1e1;
+}
+.rating-area:not(:checked) > label:before {
+  content: '★';
+}
+.rating-area > input:checked ~ label {
+  color: var(--color-yellow);
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: var(--color-yellow);
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: var(--color-yellow);
+}
+.rate-area > label:active {
+  position: relative;
 }
