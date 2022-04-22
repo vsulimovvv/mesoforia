@@ -86,6 +86,31 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Slider
+  (function slider() {
+    const sliderEl = document.querySelectorAll('.popup__slider');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        spaceBetween: 25,
+        slidesPerView: 2,
+
+        navigation: {
+          nextEl: document.querySelector('.popup__content .swiper-button-next'),
+          prevEl: document.querySelector('.popup__content .swiper-button-prev'),
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          991: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    });
+  })();
+
+  // * ===== Slider
   (function sliderMesotube() {
     const sliderEl = document.querySelectorAll('.mesotube__slider');
     sliderEl.forEach((el) => {
@@ -96,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  $("#zoom_01").elevateZoom();
+  // $("#zoom_01").elevateZoom();
 
   // * ===== Slider
   (function sliderMesotube() {
@@ -142,7 +167,7 @@ window.addEventListener('DOMContentLoaded', () => {
       new Swiper(el, {
         slidesPerView: 'auto',
         pagination: {
-          el: ".swiper-pagination",
+          el: '.swiper-pagination',
           clickable: true,
         },
       });
@@ -365,7 +390,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
-    bindModal('.phone-box__call', '.popup', '.popup__close');
+    bindModal('.certificates__resize', '.popup--certificate', '.popup__close');
   })();
 
   // * ===== Toggle Tabs
