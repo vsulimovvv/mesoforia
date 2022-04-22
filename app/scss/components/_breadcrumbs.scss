@@ -1,6 +1,6 @@
 .breadcrumbs {
   @include adaptive-value('padding-top', 25, 20, 1);
-
+// padding-top: 250px;
   &__list {
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,7 @@
+.similar-articles {
+  @include adaptive-value('padding-top', 45, 30, 1);
+  @include adaptive-value('padding-bottom', 95, 60, 1);
+  &__title {
+    @include adaptive-value('margin-bottom', 55, 30, 1);
+  }
+}

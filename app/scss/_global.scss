@@ -457,6 +457,7 @@ body {
   padding: 30px;
   margin-bottom: 30px;
   border: 2px solid #eceff4;
+
   @include breakpointsMaxW($bp-container) {
     padding: 10px;
     gap: 20px;
@@ -464,6 +465,7 @@ body {
   }
 
   @include breakpointsMaxW($bp-991) {
+    justify-content: flex-start;
     position: absolute;
     flex-direction: column;
     align-items: flex-start;
@@ -517,6 +519,10 @@ body {
     display: grid;
     gap: 10px;
 
+    &.active {
+      max-height: 100%;
+    }
+
     &--double {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
@@ -527,6 +533,9 @@ body {
     max-width: 250px;
   }
   &__box {
+    &.mb20 {
+      margin-bottom: 20px;
+    }
     .choices {
       width: 250px;
       background-color: #f2f4f8;
@@ -551,6 +560,26 @@ body {
 
       &__text {
         color: #71777a;
+      }
+    }
+  }
+
+  &__show-more {
+    margin-top: 10px;
+    text-decoration: underline;
+    color: var(--color-accent);
+  }
+
+  &__box {
+    &--more {
+      .form-filter__list {
+        margin-bottom: 7px;
+        max-height: 120px;
+        overflow: hidden;
+
+        &.active {
+          max-height: 100%;
+        }
       }
     }
   }
@@ -697,6 +726,10 @@ body {
       display: flex;
       align-items: center;
       gap: 20px;
+      @include breakpointsMaxW($bp-768) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
     &__rating {
       display: flex;
@@ -998,4 +1031,72 @@ body {
 
 .fancybox-image {
   background-color: var(--color-white);
+}
+
+.feedback {
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__list {
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+  }
+
+  .spec-tabs {
+    &__grade {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include breakpointsMaxW($bp-768) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__rating {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+        color: #3b3e3f;
+      }
+    }
+
+    &__heading {
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 500;
+      color: #3b3e3f;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__textarea {
+      width: 100%;
+      display: block;
+      font-size: 17px;
+      line-height: 1.1;
+      padding: 25px;
+      background-color: var(--color-white);
+      border: 1px solid #d5d5d5;
+      border-radius: 10px;
+      min-height: 130px;
+      color: var(--color-dark);
+      margin-bottom: 20px;
+
+      &::placeholder {
+        color: #9ba5aa;
+      }
+    }
+  }
+}
+
+.video {
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 }

@@ -1,0 +1,63 @@
+.descr-article {
+  @include adaptive-value('padding-top', 55, 40, 1);
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 35, 25, 1);
+    span {
+      display: block;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include adaptive-value('height', 475, 250, 1);
+    img {
+      @include img(cover);
+      border-radius: 10px;
+    }
+  }
+
+  &__top {
+    @include adaptive-value('margin-bottom', 55, 35, 1);
+  }
+
+  &__inner {
+    font-size: 19px;
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

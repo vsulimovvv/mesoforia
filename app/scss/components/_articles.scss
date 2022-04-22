@@ -57,6 +57,14 @@
     color: #424750;
     margin-bottom: 20px;
     min-height: 40px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
   }
 
   &__text {

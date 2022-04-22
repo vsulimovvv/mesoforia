@@ -265,9 +265,11 @@
 
       &__content {
         position: relative;
-        @include breakpointsMaxW($bp-768) {
-          display: none;
-        }
+
+        // @include breakpointsMaxW($bp-768) {
+        //   display: none;
+        // }
+
         .swiper-button-next {
           position: absolute;
           left: initial;
@@ -283,6 +285,7 @@
           position: absolute;
           left: -50px;
           right: initial;
+
           @include breakpointsMaxW($bp-container) {
             left: -10px;
           }
@@ -300,11 +303,18 @@
         .swiper-slide {
           box-sizing: border-box;
           max-width: 290px;
+
+          @include breakpointsMaxW($bp-768) {
+            // max-width: 100%;
+          }
         }
 
         @include breakpointsMaxW($bp-991) {
           max-width: 290px;
         }
+        // @include breakpointsMaxW($bp-768) {
+        //   max-width: calc(100% - 40px);
+        // }
       }
     }
   }

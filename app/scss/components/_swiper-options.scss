@@ -16,6 +16,7 @@
   border-radius: 50%;
   background-color: #eef4ff;
   transition: 150ms ease;
+  z-index: 4;
 
   &::after {
     @include elDef();

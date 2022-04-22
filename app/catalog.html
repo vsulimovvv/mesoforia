@@ -1538,9 +1538,9 @@
         <span>Сортировать</span>
 
         <select class="catalog__select select">
-          <option value="1">По возрастанию</option>
-          <option value="2">По убыванию</option>
-          <option value="3">По алфавиту</option>
+          <option value="1">По умолчанию</option>
+          <option value="1">По цене</option>
+          <option value="1">По рейтингу</option>
         </select>
 
         <button class="catalog__filter-btn" type="button">
@@ -2352,7 +2352,7 @@
       <div class="catalog__right">
         <form class="form-filter">
           <div class="form-filter__left">
-            <div class="form-filter__box">
+            <div class="form-filter__box mb20">
               <span class="form-filter__name">Цена</span>
               <div class="form-filter__inner">
                 <div class="range-slider">
@@ -2366,10 +2366,16 @@
               </div>
             </div>
             <div class="form-filter__box">
+              <span class="form-filter__name">Бренд</span>
+
               <select class="form-filter__select select">
                 <option value="1">Выберите из списка</option>
-                <option value="1">Выберите из списка</option>
-                <option value="1">Выберите из списка</option>
+                <option value="2">Mesoderm</option>
+                <option value="3">Mezoestetic</option>
+                <option value="4">Veluderm</option>
+                <option value="5">Florylis</option>
+                <option value="6">Tete Cosmeceutical</option>
+                <option value="7">Mesoram</option>
               </select>
             </div>
           </div>
@@ -2386,51 +2392,52 @@
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 0.75 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 1 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 2 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 0.3 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 2.5 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 0.2 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 1.5 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 0.25 мм </span>
                 </label>
                 <label class="checkbox">
                   <input class="checkbox__input" type="checkbox" />
                   <span class="checkbox__box"></span>
-                  <span class="checkbox__text"> 0.5 мм </span>
+                  <span class="checkbox__text"> 3 мм </span>
                 </label>
               </div>
             </div>
-            <div class="form-filter__box">
+
+            <div class="form-filter__box form-filter__box--more">
               <name class="form-filter__name">Вид массажа</name>
 
               <div class="form-filter__list">
@@ -2454,9 +2461,28 @@
                   <span class="checkbox__box"></span>
                   <span class="checkbox__text">Ароматический</span>
                 </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Ароматический</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Ароматический</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Ароматический</span>
+                </label>
               </div>
+
+              <button class="form-filter__show-more" type="button">
+               Весь список
+              </button>
             </div>
-            <div class="form-filter__box">
+            <div class="form-filter__box form-filter__box--more">
               <name class="form-filter__name">Вид массажа</name>
 
               <div class="form-filter__list">
@@ -2480,7 +2506,26 @@
                   <span class="checkbox__box"></span>
                   <span class="checkbox__text">Зона декольте</span>
                 </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text"> Шея </span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text"> Тело</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" />
+                  <span class="checkbox__box"></span>
+                  <span class="checkbox__text">Зона декольте</span>
+                </label>
               </div>
+
+              <button class="form-filter__show-more" type="button">
+                Весь список
+              </button>
             </div>
           </div>
         </form>
@@ -4610,66 +4655,66 @@
       </div>
     </div>
   </div>
+</footer>
 
-  <div class="footer__nav fix-nav">
-    <div class="container">
-      <div class="fix-nav__wrapper">
-        <ul class="fix-nav__list">
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#grid"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Каталог</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#search"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Поиск</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#heart"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Избранные</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Корзина</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#user"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Аккаунт</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+<div class="fix-nav">
+  <div class="container">
+    <div class="fix-nav__wrapper">
+      <ul class="fix-nav__list">
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#grid"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Каталог</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Поиск</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Избранные</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Корзина</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Аккаунт</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</footer>
+</div>
 
     </div>
 

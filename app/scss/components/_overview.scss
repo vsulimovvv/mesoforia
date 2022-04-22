@@ -11,8 +11,6 @@
   background-color: var(--color-white);
   overflow: hidden;
 
-
-
   &__img {
     width: 100%;
     @include adaptive-value('height', 235, 140, 1);
@@ -65,6 +63,18 @@
     margin: 0 auto;
     margin-bottom: 20px;
     min-height: 40px;
+    transition: 150ms ease;
+
+    a {
+      transition: 150ms ease;
+      color: inherit;
+    }
+
+    &:hover {
+      a {
+        color: var(--color-accent);
+      }
+    }
   }
 
   &__text {

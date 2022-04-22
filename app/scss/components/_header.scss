@@ -1,5 +1,6 @@
 .header {
-  transition: 150ms ease;
+  transition: 250ms ease;
+  // position: fixed;
 
   &__logo {
     @include breakpointsMaxW($bp-container) {
@@ -18,6 +19,8 @@
     @include adaptive-value('padding-top', 25, 15, 1);
     @include adaptive-value('padding-bottom', 25, 15, 1);
     border-bottom: 1px solid var(--color-accent-light);
+    transition: 250ms ease;
+
     @include breakpointsMaxW($bp-991) {
       display: none;
     }
@@ -49,6 +52,7 @@
   &__bottom {
     padding: 14px 0;
     border-bottom: 1px solid #edf2f4;
+    transition: 250ms ease;
 
     @include breakpointsMaxW($bp-991) {
       display: none;
@@ -256,10 +260,12 @@
     z-index: 10;
     box-shadow: 1px 1px 2px var(--color-text);
     background-color: var(--color-white);
+    animation: opacity-visibility 250ms ease forwards;
 
     .header {
       &__catalog-scroll {
         display: block;
+        animation: opacity-visibility 250ms ease forwards;
 
         @include breakpointsMaxW($bp-991) {
           display: none;
@@ -269,6 +275,10 @@
       &__bottom,
       &__top {
         display: none;
+        animation: opacity-visibility-reverse 250ms ease forwards;
+
+        // opacity: 0;
+        // visibility: hidden;
       }
     }
   }

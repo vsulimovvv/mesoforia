@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="css/style.min.css" />
 
 
-    <title>NKMZ</title>
+    <title>Mesoforia</title>
   </head>
 
   <body>
@@ -1504,27 +1504,82 @@
 </header>
 
 
-      <!-- <div class="breadcrumbs">
+      <div class="breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная</a>
+              <a class="breadcrumbs__link breadcrumbs__link--main" href="#">
+                Главная
+              </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#"> Женщинам </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Пальто женское</a>
+              <a class="breadcrumbs__link breadcrumbs__link--active" href="#">
+                Контакты
+              </a>
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
 
       <main class="main"><section class="contacts">
-  <div class="container"></div>
+  <div class="container">
+    <h2 class="contacts__title section-title">Контакты</h2>
+
+    <div class="contacts__wrapper">
+      <h3 class="contacts__heading">Контактная информация</h3>
+      <div class="contacts__inner">
+        <div class="contacts__left">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+78005559286">
+                <span class="contacts__link-icon"></span>
+                <span class="contacts__link-text">Бесплатно по России</span>
+                <span class="contacts__link-number">8 800 555-92-86</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+74993221640">
+                <span class="contacts__link-icon"></span>
+                <span class="contacts__link-text">Москва</span>
+                <span class="contacts__link-number">+7 (499) 322-16-40</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+78124261038">
+                <span class="contacts__link-icon"></span>
+                <span class="contacts__link-text">Санкт-Петербург</span>
+                <span class="contacts__link-number">8 (812) 426-10-38</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__right messengers">
+          <ul class="messengers__list">
+            <li class="messengers__item">
+              <a
+                class="messengers__link messengers__link--viber"
+                href="tel:+79818908938"
+              >
+                <span class="messengers__link-icon"></span>
+                <span class="messengers__link-text">Написать в Viber</span>
+                <span class="messengers__link-number">+7 (981) 890-89-38</span>
+              </a>
+            </li>
+            <li class="messengers__item">
+              <a
+                class="messengers__link messengers__link--whatsapp"
+                href="tel:+79818908938"
+              >
+                <span class="messengers__link-icon"></span>
+                <span class="messengers__link-text">Написать в WhatsApp</span>
+                <span class="messengers__link-number">+7 (981) 890-89-38</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
       <footer class="footer">
@@ -1691,66 +1746,66 @@
       </div>
     </div>
   </div>
+</footer>
 
-  <div class="footer__nav fix-nav">
-    <div class="container">
-      <div class="fix-nav__wrapper">
-        <ul class="fix-nav__list">
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#grid"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Каталог</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#search"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Поиск</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#heart"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Избранные</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#cart"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Корзина</span>
-            </a>
-          </li>
-          <li class="fix-nav__item">
-            <a class="fix-nav__link" href="#">
-              <div class="fix-nav__icon">
-                <svg width="17" height="17">
-                  <use xlink:href="images/sprite.svg#user"></use>
-                </svg>
-              </div>
-              <span class="fix-nav__name">Аккаунт</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+<div class="fix-nav">
+  <div class="container">
+    <div class="fix-nav__wrapper">
+      <ul class="fix-nav__list">
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#grid"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Каталог</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Поиск</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Избранные</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Корзина</span>
+          </a>
+        </li>
+        <li class="fix-nav__item">
+          <a class="fix-nav__link" href="#">
+            <div class="fix-nav__icon">
+              <svg width="17" height="17">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </div>
+            <span class="fix-nav__name">Аккаунт</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</footer>
+</div>
 
     </div>
 
@@ -1782,5 +1837,3 @@
 
   </body>
 </html>
-
-
