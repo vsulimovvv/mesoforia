@@ -33,7 +33,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 150px 1fr;
     gap: 40px;
 
     @include breakpointsMaxW($bp-991) {

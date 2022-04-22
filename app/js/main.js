@@ -96,6 +96,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  $("#zoom_01").elevateZoom();
+
   // * ===== Slider
   (function sliderMesotube() {
     const sliderEl = document.querySelectorAll('.mesonews__slider');
@@ -128,6 +130,20 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollbar: {
           el: '.swiper-scrollbar',
           hide: false,
+        },
+      });
+    });
+  })();
+
+  // * ===== Slider
+  (function sliderTestimonials() {
+    const sliderEl = document.querySelectorAll('.card-img-slider');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
       });
     });

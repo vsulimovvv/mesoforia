@@ -20,9 +20,6 @@
     @include adaptive-value('gap', 110, 50, 1);
     @include adaptive-value('margin-bottom', 60, 40, 1);
   }
-
-  &__pagination {
-  }
 }
 
 .grade-box {
@@ -175,6 +172,22 @@
     grid-template-columns: auto;
   }
 
+  &__images {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &__imsge {
+    width: 53px;
+    height: 53px;
+    
+    img {
+      @include img(cover);
+      border-radius: 5px;
+    }
+  }
+
   &__left {
     width: 95px;
     display: flex;
@@ -269,6 +282,10 @@
       }
     }
   }
+
+  &__right {
+    margin-bottom: 20px;
+  }
 }
 
 .reviews-answer {
@@ -325,6 +342,7 @@
   &__star {
     fill: var(--color-yellow);
   }
+
   &__name {
     font-size: 16px;
     line-height: 1.05;
@@ -332,6 +350,8 @@
     color: var(--color-accent);
     display: inline-block;
     margin-bottom: 5px;
+    width: 150px;
+    line-height: 1.3;
   }
 
   &__date {

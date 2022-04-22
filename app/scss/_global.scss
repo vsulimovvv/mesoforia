@@ -991,3 +991,11 @@ body {
 .rate-area > label:active {
   position: relative;
 }
+
+.simplebar-scrollbar::before {
+  background-color: #bababa;
+}
+
+.fancybox-image {
+  background-color: var(--color-white);
+}

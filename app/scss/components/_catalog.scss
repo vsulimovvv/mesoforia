@@ -105,19 +105,45 @@
       opacity: 1;
       visibility: visible;
     }
+    .card-img-slider {
+      .swiper-pagination {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
-  &__img {
+  .card-img-slider {
+    width: 100%;
+    height: 100%;
+    height: 280px;
     background-color: var(--color-white);
     border: 1px solid #eceff4;
     width: 100%;
     height: 280px;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
     position: relative;
+
+    .swiper-pagination {
+      bottom: initial;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      justify-content: flex-start;
+      opacity: 0;
+      visibility: hidden;
+      transition: 150ms ease;
+    }
+
+    &__slide {
+      box-sizing: border-box;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+    }
     @include breakpointsMaxW($bp-576) {
       height: 190px;
     }
@@ -125,6 +151,10 @@
     img {
       @include img(contain);
     }
+  }
+
+  &__img {
+    position: relative;
   }
 
   &__rating {
@@ -264,6 +294,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 250ms ease;
+    z-index: 3;
   }
 
   &__details {
@@ -273,6 +304,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 250ms ease;
+    z-index: 2;
   }
 
   &--set {

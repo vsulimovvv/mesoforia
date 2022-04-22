@@ -108,6 +108,22 @@
     transition: 450ms ease;
     transition-delay: 150ms;
 
+    &--price-list {
+      width: 240px;
+
+      .dropmenu {
+        &__link {
+          text-align: left;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &--left {
+      width: 220px;
+    }
     &--right {
       right: 0;
       left: initial;
@@ -115,10 +131,11 @@
 
     &--brands {
       width: 1240px;
-      height: 330px;
+      height: 410px;
       left: -430px;
       padding: 0;
       padding: 30px;
+      overflow-y: auto;
 
       @include breakpointsMaxW($bp-container) {
         width: 900px;
