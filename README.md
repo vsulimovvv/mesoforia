@@ -13,3 +13,6 @@
 Отзывы: https://vsulimovvv.github.io/mesoforia/app/reviews.html  
 Сертификаты: https://vsulimovvv.github.io/mesoforia/app/certificates.html  
 Тестовая страница: https://vsulimovvv.github.io/mesoforia/app/text.html  
+Контакты: https://vsulimovvv.github.io/mesoforia/app/contacts.html  
+Для описания статьи: https://vsulimovvv.github.io/mesoforia/app/descr-article.html  
+Для описания обзора: https://vsulimovvv.github.io/mesoforia/app/descr-overview.html  
