@@ -743,6 +743,24 @@
   </div>
 </div>
 
+<div class="share-block">
+  <div class="share-block__container">
+    <button class="share-block__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <script src="https://yastatic.net/share2/share.js"></script>
+    <div
+      class="ya-share2"
+      data-curtain
+      data-size="l"
+      data-shape="round"
+      data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp"
+    ></div>
+  </div>
+</div>
+
 
     <h1 class="visually-hidden">Политика Безопасности</h1>
 
@@ -1169,11 +1187,11 @@
             />
 
             <select class="form-search__select select">
-              <option value="1">Во всех категориях</option>
-              <option value="2">в новостях</option>
-              <option value="3">статьях</option>
-              <option value="4">обзорах</option>
-              <option value="5">акциях</option>
+              <option value="">Во всех категориях</option>
+              <option value="1">в новостях</option>
+              <option value="2">статьях</option>
+              <option value="3">обзорах</option>
+              <option value="4">акциях</option>
             </select>
           </div>
         </form>
@@ -1685,6 +1703,7 @@
 
       <div class="product__right">
         <div class="product__info product-info">
+        
           <div class="product-info__top">
             <div class="product-info__rating">
               <ul class="product-info__stars">
@@ -1733,8 +1752,8 @@
           <div class="product-info__undertop">
             <div class="product-info__reg">
               <p>
-                Цента доступна после
-                <a href="#"> регистраии </a>
+                Цена доступна после
+                <a href="#"> регистрации </a>
               </p>
             </div>
             <div class="product-info__details">
@@ -1751,7 +1770,7 @@
                 <div
                   class="product-info__row-right product-info__row-right--stock"
                 >
-                  <p>В наличии:</p>
+                  <p>В наличии</p>
                 </div>
               </div>
             </div>
@@ -1792,12 +1811,14 @@
                 <button class="order-goods__btn btn btn--light">
                   Купить в 1 клик
                 </button>
-                <button class="order-goods__btn btn">Нашли дешевле?</button>
+                <button class="order-goods__btn btn btn-share">
+                  Поделиться в соц сетях
+                </button>
               </div>
             </div>
             <div class="order-goods__info">
               <span class="order-goods__name"
-                >Информация о доставке даного товара в Москва</span
+                >Информация о доставке данного товара в Москву</span
               >
               <div class="order-goods__text">
                 <p>
@@ -1808,7 +1829,7 @@
 
               <ul class="order-goods__list">
                 <li class="order-goods__item order-goods__item--post">
-                  <p><strong>Почто России до склада</strong> - 200 ₽</p>
+                  <p><strong>Почтой России до склада</strong> - 200 ₽</p>
                   <p>От 5000 руб. - бесплатно (до 3 кг)</p>
                 </li>
                 <li class="order-goods__item order-goods__item--courier">
@@ -5164,8 +5185,8 @@
         </p>
       </div>
       <div class="footer__bottom-right">
-        <div class="footer__iomoney">
-          <img src="images/logo-iomoney.png" alt="iomoney" />
+        <div class="footer__yookassa">
+          <img src="images/yookassa-1.png" alt="ЮКасса" />
         </div>
         <a class="footer__up" href="#" aria-label="вверх"> </a>
       </div>
@@ -5249,9 +5270,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
 <!-- Input Mask -->
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-
-<!--  -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.6.1/jquery.zoom.min.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"></script>
 

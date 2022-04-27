@@ -97,22 +97,6 @@ window.addEventListener('DOMContentLoaded', () => {
           nextEl: document.querySelector('.popup__content .swiper-button-next'),
           prevEl: document.querySelector('.popup__content .swiper-button-prev'),
         },
-
-        // breakpoints: {
-        //   320: {
-        //     slidesPerView: 1,
-        //   },
-        //   375: {
-        //     slidesPerView: 2,
-        //   },
-
-        //   768: {
-        //     slidesPerView: 1,
-        //   },
-        //   991: {
-        //     slidesPerView: 2,
-        //   },
-        // },
       });
     });
   })();
@@ -434,6 +418,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
     bindModal('.certificates__resize', '.popup--certificate', '.popup__close');
+    bindModal('.btn-share', '.share-block', '.share-block__close');
   })();
 
   // * ===== Toggle Tabs
