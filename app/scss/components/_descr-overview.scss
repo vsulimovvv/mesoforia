@@ -1,6 +1,6 @@
 .descr-overview {
   @include adaptive-value('padding-top', 55, 40, 1);
-  @include adaptive-value('padding-bottom', 75, 40, 1);
+  @include adaptive-value('padding-bottom', 55, 40, 1);
 
   &__title {
     @include adaptive-value('margin-bottom', 35, 25, 1);

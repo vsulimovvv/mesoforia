@@ -174,8 +174,9 @@ window.addEventListener('DOMContentLoaded', () => {
   })();
 
   // * ===== Slider
+
   (function sliderTestimonials() {
-    const sliderEl = document.querySelectorAll('.card-img-slider');
+    const sliderEl = document.querySelectorAll('.card-img-slider-1');
     sliderEl.forEach((el) => {
       new Swiper(el, {
         slidesPerView: 'auto',
@@ -183,9 +184,118 @@ window.addEventListener('DOMContentLoaded', () => {
           el: '.swiper-pagination',
           clickable: true,
         },
+
+        on: {
+          init() {
+            this.autoplay.stop();
+
+            this.el.addEventListener('mouseenter', () => {
+              this.autoplay.start();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+              this.autoplay.stop();
+            });
+          },
+        },
+        autoplay: {
+          delay: 700,
+          disableOnInteraction: true,
+        },
       });
     });
   })();
+  (function sliderTestimonials() {
+    const sliderEl = document.querySelectorAll('.card-img-slider-2');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        on: {
+          init() {
+            this.autoplay.stop();
+
+            this.el.addEventListener('mouseenter', () => {
+              this.autoplay.start();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+              this.autoplay.stop();
+            });
+          },
+        },
+        autoplay: {
+          delay: 700,
+          disableOnInteraction: true,
+        },
+      });
+    });
+  })();
+  (function sliderTestimonials() {
+    const sliderEl = document.querySelectorAll('.card-img-slider-3');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        on: {
+          init() {
+            this.autoplay.stop();
+
+            this.el.addEventListener('mouseenter', () => {
+              this.autoplay.start();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+              this.autoplay.stop();
+            });
+          },
+        },
+        autoplay: {
+          delay: 700,
+          disableOnInteraction: true,
+        },
+      });
+    });
+  })();
+  (function sliderTestimonials() {
+    const sliderEl = document.querySelectorAll('.card-img-slider-4');
+    sliderEl.forEach((el) => {
+      new Swiper(el, {
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        on: {
+          init() {
+            this.autoplay.stop();
+
+            this.el.addEventListener('mouseenter', () => {
+              this.autoplay.start();
+            });
+
+            this.el.addEventListener('mouseleave', () => {
+              this.autoplay.stop();
+            });
+          },
+        },
+        autoplay: {
+          delay: 700,
+          disableOnInteraction: true,
+        },
+      });
+    });
+  })();
+
 
   // * ==== Counter
   (function counter() {

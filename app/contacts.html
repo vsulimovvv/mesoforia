@@ -1187,10 +1187,10 @@
 
             <select class="form-search__select select">
               <option value="">Во всех категориях</option>
-              <option value="1">в новостях</option>
-              <option value="2">статьях</option>
-              <option value="3">обзорах</option>
-              <option value="4">акциях</option>
+              <option value="1">В новостях</option>
+              <option value="3">В статьях</option>
+              <option value="2">В обзорах</option>
+              <option value="4">В акциях</option>
             </select>
           </div>
         </form>
@@ -1563,59 +1563,72 @@
     <h2 class="contacts__title section-title">Контакты</h2>
 
     <div class="contacts__wrapper">
-      <h3 class="contacts__heading">Контактная информация</h3>
-      <div class="contacts__inner">
-        <div class="contacts__left">
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:+78005559286">
-                <span class="contacts__link-icon"></span>
-                <span class="contacts__link-text">Бесплатно по России</span>
-                <span class="contacts__link-number">8 800 555-92-86</span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:+74993221640">
-                <span class="contacts__link-icon"></span>
-                <span class="contacts__link-text">Москва</span>
-                <span class="contacts__link-number">+7 (499) 322-16-40</span>
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link" href="tel:+78124261038">
-                <span class="contacts__link-icon"></span>
-                <span class="contacts__link-text">Санкт-Петербург</span>
-                <span class="contacts__link-number">8 (812) 426-10-38</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="contacts__right messengers">
-          <ul class="messengers__list">
-            <li class="messengers__item">
-              <a
-                class="messengers__link messengers__link--viber"
-                href="tel:+79818908938"
-              >
-                <span class="messengers__link-icon"></span>
-                <span class="messengers__link-text">Написать в Viber</span>
-                <span class="messengers__link-number">+7 (981) 890-89-38</span>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a
-                class="messengers__link messengers__link--whatsapp"
-                href="tel:+79818908938"
-              >
-                <span class="messengers__link-icon"></span>
-                <span class="messengers__link-text">Написать в WhatsApp</span>
-                <span class="messengers__link-number">+7 (981) 890-89-38</span>
-              </a>
-            </li>
-          </ul>
+      <div class="contacts__offer">
+        <h3 class="contacts__heading">Контактная информация</h3>
+        <div class="contacts__inner">
+          <div class="contacts__left">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+78005559286">
+                  <span class="contacts__link-icon"></span>
+                  <span class="contacts__link-text">Бесплатно по России</span>
+                  <span class="contacts__link-number">8 800 555-92-86</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+74993221640">
+                  <span class="contacts__link-icon"></span>
+                  <span class="contacts__link-text">Москва</span>
+                  <span class="contacts__link-number">+7 (499) 322-16-40</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="tel:+78124261038">
+                  <span class="contacts__link-icon"></span>
+                  <span class="contacts__link-text">Санкт-Петербург</span>
+                  <span class="contacts__link-number">8 (812) 426-10-38</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__right messengers">
+            <ul class="messengers__list">
+              <li class="messengers__item">
+                <a
+                  class="messengers__link messengers__link--viber"
+                  href="tel:+79818908938"
+                >
+                  <span class="messengers__link-icon"></span>
+                  <span class="messengers__link-text">Написать в Viber</span>
+                  <span class="messengers__link-number"
+                    >+7 (981) 890-89-38</span
+                  >
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  class="messengers__link messengers__link--whatsapp"
+                  href="tel:+79818908938"
+                >
+                  <span class="messengers__link-icon"></span>
+                  <span class="messengers__link-text">Написать в WhatsApp</span>
+                  <span class="messengers__link-number"
+                    >+7 (981) 890-89-38</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="contacts__map map">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa1d418f34d2691516161356a246567c00db2c0fb9e677d8fe14af1df0190b256&amp;source=constructor"
+      width="500"
+      height="400"
+    ></iframe>
   </div>
 </section>
 </main>
@@ -1729,20 +1742,20 @@
           <ul class="footer__data">
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="footer__link footer__link--mail" href="#"
-                  >zakaz@mesoforia.ru</a
-                >
+                <a class="footer__link footer__link--mail" href="#">
+                  zakaz@mesoforia.ru
+                </a>
               </li>
               <li class="footer__item">
-                <a class="footer__link footer__link--address" href="#"
-                  >Санкт-Петербург, Кронштадтская ул., д. 9, корпус 4.
-                  Бизнес-центр «К9», 1 этаж, помещение 1-Н.</a
-                >
+                <a class="footer__link footer__link--address" href="#">
+                 <span> Санкт-Петербург, Кронштадтская ул., д. 9, корпус 4.
+                  Бизнес-центр «К9», 1 этаж, помещение 1-Н.</span>
+                </a>
               </li>
               <li class="footer__item">
-                <a class="footer__link footer__link--address" href="#"
-                  >Москва, ул. 12-я Парковая, д.4, стр. 1</a
-                >
+                <a class="footer__link footer__link--address" href="#">
+                  Москва, ул. 12-я Парковая, д.4, стр. 1
+                </a>
               </li>
             </ul>
           </ul>
