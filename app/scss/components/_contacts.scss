@@ -12,6 +12,51 @@
     padding: 30px;
     margin-bottom: 30px;
     @include adaptive-value('padding', 30, 20, 1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr 0.6fr;
+    }
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__offer {
+    padding-right: 15px;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 1px;
+      height: 100%;
+      background-color: #ebebeb;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10px;
+      @include breakpointsMaxW($bp-768) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__inner {
@@ -22,18 +67,17 @@
     @include adaptive-value('gap', 40, 20, 1);
     align-items: start;
 
-    @include breakpointsMaxW($bp-768) {
+    @include breakpointsMaxW($bp-991) {
       grid-template-columns: auto;
-      justify-content: center;
+    }
+    @include breakpointsMaxW($bp-768) {
+      justify-content: flex-start;
     }
   }
 
   &__heading {
     color: var(--color-dark);
     @include adaptive-value('margin-bottom', 35, 20, 1);
-    @include breakpointsMaxW($bp-768) {
-      text-align: center;
-    }
   }
 
   &__list {
