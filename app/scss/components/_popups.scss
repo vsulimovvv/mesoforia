@@ -225,13 +225,16 @@
         width: calc(100% - 20px);
         box-sizing: border-box;
         padding: 25px;
+
         @include breakpointsMaxW($bp-container) {
           padding: 25px 15px;
         }
+
         @include breakpointsMaxW($bp-991) {
           max-width: 800px;
         }
       }
+
       &__preview {
         max-width: 415px;
         width: 100%;
@@ -266,10 +269,6 @@
       &__content {
         position: relative;
 
-        // @include breakpointsMaxW($bp-768) {
-        //   display: none;
-        // }
-
         .swiper-button-next {
           position: absolute;
           left: initial;
@@ -303,18 +302,73 @@
         .swiper-slide {
           box-sizing: border-box;
           max-width: 290px;
-
-          @include breakpointsMaxW($bp-768) {
-            // max-width: 100%;
-          }
         }
 
         @include breakpointsMaxW($bp-991) {
           max-width: 290px;
         }
-        // @include breakpointsMaxW($bp-768) {
-        //   max-width: calc(100% - 40px);
-        // }
+      }
+    }
+  }
+
+  &--quick-view {
+    .popup {
+      &__container {
+        max-width: 860px;
+
+        @include breakpointsMaxW($bp-576) {
+          padding-top: 40px;
+        }
+      }
+    }
+
+    .product {
+      padding: 0;
+      padding-top: 20px;
+
+      &__title {
+        text-align: left;
+        @include adaptive-value('font-size', 22, 18, 1);
+      }
+
+      &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 0.6fr;
+
+        @include breakpointsMaxW($bp-768) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      &__slider {
+        max-height: 450px;
+
+        @include breakpointsMaxW($bp-768) {
+          max-height: 350px;
+        }
+      }
+
+      .product-info {
+        &__price--new {
+          @include adaptive-value('font-size', 40, 25, 1);
+        }
+      }
+
+      .order-goods {
+        grid-template-columns: 1fr;
+
+        &__btn {
+          padding: 10px;
+          height: 40px;
+          font-size: 16px;
+
+          &--cart {
+            &::after {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
       }
     }
   }

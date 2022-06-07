@@ -402,6 +402,36 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+  // * ==== Single Product
+  (function verticalSlider() {
+    let mySwiperNav = new Swiper('#slider-nav-2', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      direction: 'vertical',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          direction: 'horizontal',
+        },
+        991: {
+          direction: 'vertical',
+        },
+      },
+    });
+
+    let mySwiper = new Swiper('#slider-main-2', {
+      spaceBetween: 10,
+      loopedSlides: 4,
+      thumbs: {
+        swiper: mySwiperNav,
+      },
+    });
+  })();
 
   //* Change Background Header
   function scrollHeader() {
@@ -530,6 +560,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     bindModal('.certificates__resize', '.popup--certificate', '.popup__close');
     bindModal('.btn-share', '.share-block', '.share-block__close');
+    bindModal('.btn-view', '.popup--quick-view', '.popup__close');
   })();
 
   // * ===== Toggle Tabs
