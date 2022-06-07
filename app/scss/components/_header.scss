@@ -1,6 +1,5 @@
 .header {
   transition: 250ms ease;
-  // position: fixed;
 
   &__logo {
     @include breakpointsMaxW($bp-container) {
@@ -494,6 +493,90 @@
   &__list {
     display: flex;
     align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    &--cart {
+      &:hover {
+        .cart-drop {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+
+      .cart-drop {
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        width: 740px;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: var(--color-white);
+        box-shadow: 0px 19px 51px 0px rgba(53, 56, 62, 0.23);
+        border-radius: 5px;
+        padding: 20px;
+        transition: 450ms ease;
+        transition-delay: 150ms;
+
+        &__item {
+          border-bottom: 1px solid #ebebeb;
+        }
+
+        &__list {
+          margin-bottom: 20px;
+          display: grid;
+          gap: 10px;
+          max-height: 300px;
+          overflow-y: auto;
+        }
+
+        &__bottom {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 10px 0;
+        }
+
+        &__link {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          line-height: 1.1;
+          font-size: 14px;
+
+          &:hover {
+            color: var(--color-accent);
+
+            .cart-drop__link-icon {
+              background-color: var(--color-accent);
+            }
+          }
+
+          &-icon {
+            width: 40px;
+            height: 30px;
+            background-color: var(--color-dark);
+            position: relative;
+            transition: 200ms ease;
+
+            &::after {
+              @include elDef();
+              width: 50%;
+              height: 50%;
+              @include maskImage(url('../images/icons/cart-2.svg'), contain);
+              background-color: var(--color-white);
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
   }
 
   &__link {
