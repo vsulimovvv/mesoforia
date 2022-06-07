@@ -1,4 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
+  // * ===== Mask input
+  $('input[type="tel"]').mask('+7 (999) 999-99-99');
+
   // * ===== Custom select
   (function customSelect() {
     const selects = document.querySelectorAll('.select');
@@ -296,7 +299,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-
   // * ==== Counter
   (function counter() {
     const counterEl = document.querySelectorAll('.counter');
@@ -367,7 +369,6 @@ window.addEventListener('DOMContentLoaded', () => {
     new Swiper(sliderEl, {
       slidesPerView: 'auto',
       spaceBetween: 7,
-      // centeredSlides: true,
     });
   })();
 

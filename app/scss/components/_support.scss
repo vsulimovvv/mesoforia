@@ -1,0 +1,36 @@
+.support {
+  @include adaptive-value('padding-top', 50, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  .support-box {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    @include adaptive-value('gap', 30, 20, 1);
+
+    &__title {
+      line-height: 1.5;
+      font-weight: 600;
+      color: #3e4244;
+      @include adaptive-value('font-size', 22, 18, 1);
+    }
+
+    &__text {
+      color: #8f8f8f;
+      @include adaptive-value('font-size', 17, 15, 1);
+    }
+  }
+}
