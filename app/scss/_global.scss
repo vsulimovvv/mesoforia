@@ -278,9 +278,11 @@ body {
       }
     }
   }
+  
   &__socials {
     margin-bottom: 30px;
   }
+
   .dropmenu {
     transform: translateX(-10px);
     opacity: 0;
@@ -993,9 +995,11 @@ body {
   overflow: hidden;
   margin: 0 auto;
 }
+
 .rating-area:not(:checked) > input {
   display: none;
 }
+
 .rating-area:not(:checked) > label {
   float: right;
   width: 25px;
