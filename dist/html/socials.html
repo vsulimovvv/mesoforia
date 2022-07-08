@@ -10,7 +10,7 @@
   <body>
     @include('./components/popups/_popups.html')
 
-    <h1 class="visually-hidden">Сертификаты</h1>
+    <h1 class="visually-hidden">Мы в социальных сетях</h1>
 
     <div class="site-wrapper">
       @include('./components/_header.html')
@@ -24,16 +24,16 @@
               >
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link breadcrumbs__link--active"
-                >Сертификаты</a
-              >
+              <a class="breadcrumbs__link breadcrumbs__link--active">Мы в социальных сетях</a>
             </li>
           </ul>
         </div>
       </div>
 
       <main class="main">
-        @include('./components/_certificates.html')
+        @include('./components/_socials-page.html')
+        @include('./components/_newsletter.html')
+        @include('./components/_question.html')
       </main>
       @include('./components/_footer.html')
     </div>
@@ -41,4 +41,3 @@
     @include('./components/base/_scripts.html')
   </body>
 </html>
-
