@@ -518,7 +518,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const content = target.querySelector(accordionContent);
         target.classList.toggle('active');
         if (target.classList.contains('active')) {
-          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.maxHeight = content.scrollHeight + '1px';
         } else {
           content.style.maxHeight = null;
         }
@@ -526,6 +526,24 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
+  toggleAccordion('.drop-box__control', '.drop-box__content', '.drop-box');
+  // // * ===== Accordion
+  // const toggleAccordion = (accordionControl, accordionContent, accordion) => {
+  //   const filters = document.querySelectorAll(accordionControl);
+  //   filters.forEach((el) => {
+  //     el.addEventListener('click', (e) => {
+  //       const target = e.target.closest(accordion);
+  //       const content = target.querySelector(accordionContent);
+  //       target.classList.toggle('active');
+  //       if (target.classList.contains('active')) {
+  //         content.style.maxHeight = content.scrollHeight + 'px';
+  //       } else {
+  //         content.style.maxHeight = null;
+  //       }
+  //     });
+  //   });
+  // };
+  // toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
 
   // * ===== Modal
   (function modals() {
