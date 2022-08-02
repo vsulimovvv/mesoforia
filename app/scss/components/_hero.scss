@@ -12,12 +12,33 @@
     .swiper-button-next,
     .swiper-button-prev {
       position: absolute;
+
+      @include breakpointsMaxW($bp-container) {
+        top: initial;
+        bottom: 80px;
+        bottom: calc(25px + (80 - 25) * ((100vw - 991px) / (1270 - 991)));
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        bottom: initial;
+        top: 50%;
+      }
     }
+
     .swiper-button-next {
       right: 5%;
+
+      @include breakpointsMaxW($bp-container) {
+        right: 15px;
+      }
     }
+
     .swiper-button-prev {
       left: 5%;
+
+      @include breakpointsMaxW($bp-container) {
+        left: 15px;
+      }
     }
   }
 

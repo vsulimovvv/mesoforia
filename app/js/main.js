@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
           }),
         });
 
-        el.noUiSlider.on('update', function (values, handle) {
+        el.noUiSlider.on('update', function(values, handle) {
           if (handle) {
             maxStep.forEach((el) => {
               el.innerHTML = values[handle];
@@ -369,6 +369,8 @@ window.addEventListener('DOMContentLoaded', () => {
     new Swiper(sliderEl, {
       slidesPerView: 'auto',
       spaceBetween: 7,
+      loop: true,
+      freeMode: true,
     });
   })();
 
@@ -436,6 +438,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //* Change Background Header
   function scrollHeader() {
     const nav = document.querySelector('header');
+    const main = document.querySelector('.main--main');
     const breadcrumbs = document.querySelectorAll('.breadcrumbs');
 
     function addPadding() {
@@ -452,9 +455,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (this.scrollY >= 100) {
       nav.classList.add('scroll-header');
       addPadding();
+      main.classList.add('mt');
     } else {
       nav.classList.remove('scroll-header');
       removePadding();
+      main.classList.remove('mt');
     }
   }
   window.addEventListener('scroll', scrollHeader);
@@ -586,37 +591,39 @@ window.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelectorAll(headerSelector);
     const tab = document.querySelectorAll(tabSelector);
     const content = document.querySelectorAll(contentSelector);
-    if (header) {
-      hideTabContent();
-      showTabContent();
-      function hideTabContent() {
-        content.forEach((item) => {
-          item.classList.remove('active');
-        });
-        tab.forEach((item) => {
-          item.classList.remove(activeClass);
-        });
-      }
-      function showTabContent(i = 0) {
-        content[i].classList.add('active');
-        tab[i].classList.add(activeClass);
-      }
-      header.forEach((item) => {
-        if (item) {
-          item.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-              tab.forEach((item, i) => {
-                if (target == item || target.parentNode == item) {
-                  hideTabContent();
-                  showTabContent(i);
-                }
-              });
-            }
+    header.forEach((el) => {
+      if (header) {
+        hideTabContent();
+        showTabContent();
+        function hideTabContent() {
+          content.forEach((item) => {
+            item.classList.remove('active');
+          });
+          tab.forEach((item) => {
+            item.classList.remove(activeClass);
           });
         }
-      });
-    }
+        function showTabContent(i = 0) {
+          content[i].classList.add('active');
+          tab[i].classList.add(activeClass);
+        }
+        header.forEach((item) => {
+          if (item) {
+            item.addEventListener('click', (e) => {
+              const target = e.target;
+              if (target.classList.contains(tabSelector.replace(/\./, ''))) {
+                tab.forEach((item, i) => {
+                  if (target == item || target.parentNode == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+    });
   }
   someTabs(
     '.news-tabs',
@@ -634,37 +641,40 @@ window.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelectorAll(headerSelector);
     const tab = document.querySelectorAll(tabSelector);
     const content = document.querySelectorAll(contentSelector);
-    if (header) {
-      hideTabContent();
-      showTabContent();
-      function hideTabContent() {
-        content.forEach((item) => {
-          item.classList.remove('active');
-        });
-        tab.forEach((item) => {
-          item.classList.remove(activeClass);
-        });
-      }
-      function showTabContent(i = 0) {
-        content[i].classList.add('active');
-        tab[i].classList.add(activeClass);
-      }
-      header.forEach((item) => {
-        if (item) {
-          item.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-              tab.forEach((item, i) => {
-                if (target == item || target.parentNode == item) {
-                  hideTabContent();
-                  showTabContent(i);
-                }
-              });
-            }
+
+    header.forEach((el) => {
+      if (el) {
+        hideTabContent();
+        showTabContent();
+        function hideTabContent() {
+          content.forEach((item) => {
+            item.classList.remove('active');
+          });
+          tab.forEach((item) => {
+            item.classList.remove(activeClass);
           });
         }
-      });
-    }
+        function showTabContent(i = 0) {
+          content[i].classList.add('active');
+          tab[i].classList.add(activeClass);
+        }
+        header.forEach((item) => {
+          if (item) {
+            item.addEventListener('click', (e) => {
+              const target = e.target;
+              if (target.classList.contains(tabSelector.replace(/\./, ''))) {
+                tab.forEach((item, i) => {
+                  if (target == item || target.parentNode == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+    });
   }
 
   someTabsOverview(
