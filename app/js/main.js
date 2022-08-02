@@ -371,6 +371,14 @@ window.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 7,
       loop: true,
       freeMode: true,
+      navigation: {
+        nextEl: document.querySelector(
+          '.subscription__slider .swiper-button-next'
+        ),
+        prevEl: document.querySelector(
+          '.subscription__slider .swiper-button-prev'
+        ),
+      },
     });
   })();
 

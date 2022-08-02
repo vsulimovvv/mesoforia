@@ -8751,6 +8751,30 @@ body.no-scroll {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.subscription .swiper-button-next,
+.subscription .swiper-button-prev {
+  position: absolute;
+  top: 55%;
+}
+@media (max-width: 767.98px) {
+  .subscription .swiper-button-next,
+  .subscription .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+    top: 57%;
+  }
+  .subscription .swiper-button-next::after,
+  .subscription .swiper-button-prev::after {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .subscription .swiper-button-next,
+  .subscription .swiper-button-prev {
+    top: 60%;
+  }
+}
 .recommendations {
   padding-top: 70px;
   padding-bottom: 70px;

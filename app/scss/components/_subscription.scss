@@ -142,4 +142,25 @@
     align-items: center;
     justify-content: center;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 55%;
+
+    @include breakpointsMaxW($bp-768) {
+      width: 25px;
+      height: 25px;
+      top: 57%;
+
+      &::after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      top: 60%;
+    }
+  }
 }
