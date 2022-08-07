@@ -315,11 +315,15 @@
     .popup {
       &__container {
         max-width: 860px;
+        // overflow-y: initial;
 
         @include breakpointsMaxW($bp-576) {
           padding-top: 40px;
         }
       }
+      // &__wrapper {
+      //   overflow-y: auto;
+      // }
     }
 
     .product {
